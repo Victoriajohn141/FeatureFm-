@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+html {
+    /* i am giving this a greater height so that the profile container does not overlap it  */
+    height: 1000px;
+}
+
+div.container, body {
+    height: 100%;
+}
+div.profile-container {
+    /* note: i am hard coding these values because i am just building up the skeleton of the app. */
+    width: 300px;
+    height: 800px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+div.song-information-section {
+    background-color: rgb(65, 64, 64);
+    text-align: center;
+    color: white;
+}
+div.cover-art-section img {
+    width: 300px;
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7); */
+}
