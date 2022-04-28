@@ -7,6 +7,9 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    background-image: url(https://res.cloudinary.com/feature-fm/image/fetch/s--IS6xrwXV--/w_424,h_424,c_lfill/c_scale,fl_relative,w_1.1/e_blur_region:800/f_auto/https%3A%2F%2Fimagestore.ffm.to%2Flink%2Fd27d55b5e180206564f6ab43fa728f54.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 html {
