@@ -43,7 +43,7 @@ function getSongInformation() {
         const songInformation = getSongInformation();
         songInformation.artist - songInformation.songName
 
-        document.querySelector('div.song-information-section h3').innerText = `${songInformation.artist} - ${songInformation.songName}`;
+        document.querySelector('div.song-information-section h3').innerText = `${songInformation.artist} - ${songInformation.songName};
     } 
 )()
 
