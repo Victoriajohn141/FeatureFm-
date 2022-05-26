@@ -138,5 +138,26 @@ function getSongInformation() {
         list4.appendChild(a4);
 
         ul.appendChild(list4);
+
+
+        const list5 = document.createElement('li');
+        list5.className = "streaming-platform-1";
+        console.log(list5)
+
+        const img5 = document.createElement('img');
+        img5.src = "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png";
+        img5.className = "tube";
+
+        const a5 = document.createElement('a');
+        a5.className = "btn";
+        a5.href = "https://soundcloud.com/tomesroom/sets/loev-4";
+        a5.target = "_blank";
+        a5.innerText = "play";
+
+        list5.appendChild(img5);
+        list5.appendChild(a5);
+
+        ul.appendChild(list5);
+
     }
 )()
