@@ -161,3 +161,18 @@ function getSongInformation() {
 
     }
 )()
+
+somgInformations("", "")
+    function somgInformations(href, src) {
+        const a = document.createElement('a')
+        const img = document.createElement('img');
+        const list = document.createElement('li');
+        img.className = "tube"; img.src = src;
+        list.className = "streaming-platform";
+        a.className = "btn"; a.href = href;
+        a.target = "_blank";
+        a.innerText = "Play";
+        list.appendChild(img);
+        list.appendChild(a);
+
+    }
