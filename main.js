@@ -76,103 +76,43 @@ function getSongInformation() {
 
         console.log(a)
         console.log(ul)
+        
+       
+        const songItem2 = songInformations("https://open.spotify.com/album/0xATpwMQQqS5Gb7gS16MIa", "https://cloudinary-cdn.ffm.to/s--e_GXTT_B--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_spotify.png");
 
- 
-        const list2 = document.createElement('li');
-        list2.className = "streaming-platform-1";
-        console.log(list2)
+        ul.appendChild(songItem2);
+       
+        const songItem3 = songInformations("https://www.boomplay.com/share/album/40140729?srModel=COPYLINK&srList=IOS&ffm=FFM_97fc9427eddbf0bd7d40bbd42ac991ad", "https://cloudinary-cdn.ffm.to/s--JovdmVc_--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_boomplay_new.png");
 
-        const img2 = document.createElement('img')
-        img2.src = "https://cloudinary-cdn.ffm.to/s--e_GXTT_B--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_spotify.png";
-        img2.className ="tube";
-         
-        const a2 = document.createElement('a')
-        a2.href= "https://open.spotify.com/album/0xATpwMQQqS5Gb7gS16MIa";
-        a2.className = "btn";
-        a2.target = "_blank";
-        a2.innerText = "Play";
+        ul.appendChild(songItem3);
 
-        list2.appendChild(img2);
-        list2.appendChild(a2);
+        const songItem4 = songInformations("https://audiomack.com/tome/album/lov?ffm=FFM_891fa8c99bdcd5ce0e1da0606d807595", "https://cloudinary-cdn.ffm.to/s--afUcMju---/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_audiomack.png"); 
 
-        ul.appendChild(list2);
-
-        console.log(ul)
+        ul.appendChild(songItem4);
 
 
-        const list3 = document.createElement('li');
-        list3.className = "streaming-platform-1";
-        console.log(list3)
 
-        const img3 = document.createElement('img')
-        img3.src = "https://cloudinary-cdn.ffm.to/s--JovdmVc_--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_boomplay_new.png";
-        img3.className = "tube";
+        const songItem = songInformations("https://soundcloud.com/tomesroom/sets/loev-4", "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png");
+        console.log(songItem)
 
-        const a3 = document.createElement('a')
-        a3.className = "btn";
-        a3.href = "https://www.boomplay.com/share/album/40140729?srModel=COPYLINK&srList=IOS&ffm=FFM_97fc9427eddbf0bd7d40bbd42ac991ad";
-        a3.target = "_blank";
-        a3.innerText = "Play";
-         
-        list3.appendChild(img3);
-        list3.appendChild(a3);
-
-        ul.appendChild(list3);
-
-
-        const list4 = document.createElement('li');
-        list4.className = "streaming-platform-1";
-        console.log(list4)
-
-        const img4 = document.createElement('img');
-        img4.src = "https://cloudinary-cdn.ffm.to/s--afUcMju---/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_audiomack.png";
-        img4.className = "tube";
-
-        const a4 = document.createElement('a');
-        a4.className = "btn";
-        a4.href = "https://audiomack.com/tome/album/lov?ffm=FFM_891fa8c99bdcd5ce0e1da0606d807595";
-        a4.target = "_blank";
-        a4.innerText = "play";
-
-        list4.appendChild(img4);
-        list4.appendChild(a4);
-
-        ul.appendChild(list4);
-
-
-        const list5 = document.createElement('li');
-        list5.className = "streaming-platform-1";
-        console.log(list5)
-
-        const img5 = document.createElement('img');
-        img5.src = "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png";
-        img5.className = "tube";
-
-        const a5 = document.createElement('a');
-        a5.className = "btn";
-        a5.href = "https://soundcloud.com/tomesroom/sets/loev-4";
-        a5.target = "_blank";
-        a5.innerText = "play";
-
-        list5.appendChild(img5);
-        list5.appendChild(a5);
-
-        ul.appendChild(list5);
+        ul.appendChild(songItem);
 
     }
 )()
 
-somgInformations("", "")
-    function somgInformations(href, src) {
+
+    function songInformations(href, src) {
         const a = document.createElement('a')
         const img = document.createElement('img');
         const list = document.createElement('li');
         img.className = "tube"; img.src = src;
-        list.className = "streaming-platform";
+        list.className = "streaming-platform-1";
         a.className = "btn"; a.href = href;
         a.target = "_blank";
         a.innerText = "Play";
         list.appendChild(img);
         list.appendChild(a);
+         
+        return list
 
     }
