@@ -54,7 +54,7 @@ function getSongInformation() {
         console.log(document.querySelector("ul#streaming-platforms"))
 
 
-        const songItem1 = songInformations("https://www.youtube.com/watch?v=xxpDAU-ig_Y", "https://res.cloudinary.com/feature-fm/image/fetch/s--RduBEAtU--/h_64,c_scale/f_auto/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_applemusic_listen.png");
+        const songItem1 = makeSongItemElement("https://www.youtube.com/watch?v=xxpDAU-ig_Y", "https://res.cloudinary.com/feature-fm/image/fetch/s--RduBEAtU--/h_64,c_scale/f_auto/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_applemusic_listen.png");
 
         let ul = document.querySelector('ul#streaming-platforms');
 
@@ -64,19 +64,19 @@ function getSongInformation() {
         console.log(ul)
         
        
-        const songItem2 = songInformations("https://open.spotify.com/album/0xATpwMQQqS5Gb7gS16MIa", "https://cloudinary-cdn.ffm.to/s--e_GXTT_B--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_spotify.png");
+        const songItem2 = makeSongItemElement("https://open.spotify.com/album/0xATpwMQQqS5Gb7gS16MIa", "https://cloudinary-cdn.ffm.to/s--e_GXTT_B--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_spotify.png");
 
         ul.appendChild(songItem2);
        
-        const songItem3 = songInformations("https://www.boomplay.com/share/album/40140729?srModel=COPYLINK&srList=IOS&ffm=FFM_97fc9427eddbf0bd7d40bbd42ac991ad", "https://cloudinary-cdn.ffm.to/s--JovdmVc_--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_boomplay_new.png");
+        const songItem3 = makeSongItemElement("https://www.boomplay.com/share/album/40140729?srModel=COPYLINK&srList=IOS&ffm=FFM_97fc9427eddbf0bd7d40bbd42ac991ad", "https://cloudinary-cdn.ffm.to/s--JovdmVc_--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_boomplay_new.png");
 
         ul.appendChild(songItem3);
 
-        const songItem4 = songInformations("https://audiomack.com/tome/album/lov?ffm=FFM_891fa8c99bdcd5ce0e1da0606d807595", "https://cloudinary-cdn.ffm.to/s--afUcMju---/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_audiomack.png"); 
+        const songItem4 = makeSongItemElement("https://audiomack.com/tome/album/lov?ffm=FFM_891fa8c99bdcd5ce0e1da0606d807595", "https://cloudinary-cdn.ffm.to/s--afUcMju---/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_audiomack.png"); 
 
         ul.appendChild(songItem4);
 
-        const songItem = songInformations("https://soundcloud.com/tomesroom/sets/loev-4", "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png");
+        const songItem = makeSongItemElement("https://soundcloud.com/tomesroom/sets/loev-4", "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png");
         console.log(songItem)
 
         ul.appendChild(songItem);
@@ -86,7 +86,7 @@ function getSongInformation() {
 )()
 
 
-    function songInformations(href, src) {
+    function makeSongItemElement(href, src) {
         const a = document.createElement('a')
         const img = document.createElement('img');
         const list = document.createElement('li');
