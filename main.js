@@ -53,28 +53,14 @@ function getSongInformation() {
         document.querySelector('div.song-information-section h3').innerText = `${songInformation.artist} - ${songInformation.songName}`;
         console.log(document.querySelector("ul#streaming-platforms"))
 
-        // Todo: refactor to functions
-        const list = document.createElement('li')
-        list.className = "streaming-platform-1"
-        console.log(list)
 
-        const img = document.createElement('img')
-        img.src = "https://res.cloudinary.com/feature-fm/image/fetch/s--RduBEAtU--/h_64,c_scale/f_auto/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_applemusic_listen.png"
-        img.className = "tube";
+        const songItem1 = songInformations("https://www.youtube.com/watch?v=xxpDAU-ig_Y", "https://res.cloudinary.com/feature-fm/image/fetch/s--RduBEAtU--/h_64,c_scale/f_auto/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_applemusic_listen.png");
 
-        const a = document.createElement('a')
-        a.className = "btn";
-        a.target = "_blank";
-        a.href = "https://www.youtube.com/watch?v=xxpDAU-ig_Y";
-        a.innerText = "Play";
-
-        list.appendChild(img);
-        list.appendChild(a);
         let ul = document.querySelector('ul#streaming-platforms');
 
-        ul.appendChild(list);
+        ul.appendChild(songItem1);
 
-        console.log(a)
+
         console.log(ul)
         
        
@@ -90,12 +76,11 @@ function getSongInformation() {
 
         ul.appendChild(songItem4);
 
-
-
         const songItem = songInformations("https://soundcloud.com/tomesroom/sets/loev-4", "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png");
         console.log(songItem)
 
         ul.appendChild(songItem);
+
 
     }
 )()
