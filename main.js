@@ -36,7 +36,22 @@ function getSongInformation() {
             {
                 streamUrl: 'https://www.boomplay.com/share/album/40140729?srModel=COPYLINK&srList=IOS&ffm=FFM_56ddd1e25f937722c5a18d565dc4ec9c',
                 logoUrl: 'https://res.cloudinary.com/feature-fm/image/fetch/s--lvBUgFRc--/h_64,c_scale/f_auto/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_boomplay_new.png',
-                actionText: 'play'
+                actionText: 'Stream'
+            },
+            {
+                streamUrl: "https://open.spotify.com/album/0xATpwMQQqS5Gb7gS16MIa",
+                logoUrl: "https://cloudinary-cdn.ffm.to/s--e_GXTT_B--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_spotify.png",
+                actionText: "Play"
+            },
+            {
+                streamUrl: "https://audiomack.com/tome/album/lov?ffm=FFM_891fa8c99bdcd5ce0e1da0606d807595",
+                logoUrl: "https://cloudinary-cdn.ffm.to/s--afUcMju---/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_audiomack.png",
+                actionText: "Play"
+            },
+            {
+                streamUrl: "https://soundcloud.com/tomesroom/sets/loev-4",
+                logoUrl: "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png",
+                actionText: "Play"
             }
         ]
     }
@@ -50,37 +65,29 @@ function getSongInformation() {
         const songInformation = getSongInformation();
         songInformation.artist - songInformation.songName
 
+       
+
+
         document.querySelector('div.song-information-section h3').innerText = `${songInformation.artist} - ${songInformation.songName}`;
         console.log(document.querySelector("ul#streaming-platforms"))
 
-
-        const songItem1 = makeSongItemElement("https://www.youtube.com/watch?v=xxpDAU-ig_Y", "https://res.cloudinary.com/feature-fm/image/fetch/s--RduBEAtU--/h_64,c_scale/f_auto/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_applemusic_listen.png");
-
         let ul = document.querySelector('ul#streaming-platforms');
 
-        ul.appendChild(songItem1);
+
+        songInformation.streamingPlatforms.forEach(function (item, index) {
+            console.log({ item, index });
+
+            const songItem1 = makeSongItemElement(item.streamUrl, item.logoUrl);
+
+            ul.appendChild(songItem1);
+     
 
 
-        console.log(ul)
-        
+        })
+
+
+
        
-        const songItem2 = makeSongItemElement("https://open.spotify.com/album/0xATpwMQQqS5Gb7gS16MIa", "https://cloudinary-cdn.ffm.to/s--e_GXTT_B--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_spotify.png");
-
-        ul.appendChild(songItem2);
-       
-        const songItem3 = makeSongItemElement("https://www.boomplay.com/share/album/40140729?srModel=COPYLINK&srList=IOS&ffm=FFM_97fc9427eddbf0bd7d40bbd42ac991ad", "https://cloudinary-cdn.ffm.to/s--JovdmVc_--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_boomplay_new.png");
-
-        ul.appendChild(songItem3);
-
-        const songItem4 = makeSongItemElement("https://audiomack.com/tome/album/lov?ffm=FFM_891fa8c99bdcd5ce0e1da0606d807595", "https://cloudinary-cdn.ffm.to/s--afUcMju---/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_audiomack.png"); 
-
-        ul.appendChild(songItem4);
-
-        const songItem = makeSongItemElement("https://soundcloud.com/tomesroom/sets/loev-4", "https://cloudinary-cdn.ffm.to/s--U_n7Xhib--/h_64,c_scale/f_webp/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_soundcloud.png");
-        console.log(songItem)
-
-        ul.appendChild(songItem);
-
 
     }
 )()
